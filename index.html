@@ -59,7 +59,7 @@
 
     <section id="login-form" class="hidden">
       <h2>Login to Relive the Memory</h2>
-      <form>
+      <form onsubmit="handleLogin(event)">
         <label for="username">Username</label>
         <input type="text" id="username" name="username" placeholder="Enter your username" required>
         
@@ -68,6 +68,9 @@
         
         <button type="submit">Login</button>
       </form>
+      <div id="notification" class="hidden">
+        <p>You don't have access to open this memory. 😢</p>
+      </div>
     </section>
 
     <section id="interactive-heart">
