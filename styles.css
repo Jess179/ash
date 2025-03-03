@@ -67,24 +67,33 @@ header h1 {
   transform: scale(1.1);
 }
 
-#memory-display {
+#animation-container {
   margin-top: 20px;
-  animation: fadeIn 1s ease-in;
+  position: relative;
+  height: 200px; /* Adjust based on your image size */
+  overflow: hidden;
 }
 
-#memory-image {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+#walking-girl {
+  position: absolute;
+  bottom: 0;
+  left: -200px; /* Start off-screen */
+  height: 200px; /* Adjust based on your image size */
+  animation: walkIn 2s forwards;
+}
+
+@keyframes walkIn {
+  from { left: -200px; }
+  to { left: 50%; transform: translateX(-50%); }
+}
+
+@keyframes walkOut {
+  from { left: 50%; transform: translateX(-50%); }
+  to { left: 100%; }
 }
 
 .hidden {
   display: none;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 /* Responsive Design */
