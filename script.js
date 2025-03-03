@@ -1,4 +1,5 @@
 let isAnimationVisible = false;
+let isLoginFormVisible = false;
 
 function toggleAnimation() {
   const animationContainer = document.getElementById('animation-container');
@@ -10,6 +11,19 @@ function toggleAnimation() {
     // Hide the animation
     animationContainer.classList.add('hidden');
     isAnimationVisible = false;
+  }
+}
+
+function showLoginForm() {
+  const loginForm = document.getElementById('login-form');
+  if (!isLoginFormVisible) {
+    // Show the login form
+    loginForm.classList.remove('hidden');
+    isLoginFormVisible = true;
+  } else {
+    // Hide the login form
+    loginForm.classList.add('hidden');
+    isLoginFormVisible = false;
   }
 }
 
