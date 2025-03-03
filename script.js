@@ -31,3 +31,16 @@ function showMessage() {
   const secretMessage = document.getElementById('secretMessage');
   secretMessage.classList.remove('hidden');
 }
+
+function handleLogin(event) {
+  event.preventDefault(); // Prevent form submission
+  const notification = document.getElementById('notification');
+  
+  // Show the notification
+  notification.classList.remove('hidden');
+  
+  // Hide the notification after 3 seconds
+  setTimeout(() => {
+    notification.classList.add('hidden');
+  }, 3000);
+}
