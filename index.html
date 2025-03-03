@@ -27,9 +27,12 @@
     <section id="memories">
       <h2>Our Memories</h2>
       <div class="memory-grid">
-        <div class="memory">🌟 The day we met</div>
+        <div class="memory" onclick="showMemory('day-we-met')">🌟 The day we met</div>
         <div class="memory">💬 Our first conversation</div>
         <div class="memory">🎉 That time we laughed so hard</div>
+      </div>
+      <div id="memory-display" class="hidden">
+        <img id="memory-image" src="" alt="Memory Image">
       </div>
     </section>
 
