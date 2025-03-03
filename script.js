@@ -1,10 +1,21 @@
-function showMemory(memoryType) {
-  const memoryDisplay = document.getElementById('memory-display');
-  const memoryImage = document.getElementById('memory-image');
+let isAnimationVisible = false;
 
-  if (memoryType === 'day-we-met') {
-    memoryImage.src = 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'; // Replace with your image URL
-    memoryDisplay.classList.remove('hidden');
+function toggleAnimation() {
+  const animationContainer = document.getElementById('animation-container');
+  const walkingGirl = document.getElementById('walking-girl');
+
+  if (!isAnimationVisible) {
+    // Show the animation
+    animationContainer.classList.remove('hidden');
+    walkingGirl.style.animation = 'walkIn 2s forwards';
+    isAnimationVisible = true;
+  } else {
+    // Hide the animation
+    walkingGirl.style.animation = 'walkOut 2s forwards';
+    setTimeout(() => {
+      animationContainer.classList.add('hidden');
+    }, 2000); // Wait for the animation to finish
+    isAnimationVisible = false;
   }
 }
 
