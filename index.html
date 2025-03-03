@@ -3,14 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Good Morning, Ash!</title>
+  <title>For My Crush 💖</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="morning-container">
-    <h1>Hi Ash, Good Morning! 🌞</h1>
-    <p>It's a beautiful day, just like you.</p>
+  <div class="container">
+    <header>
+      <h1>For My Crush 💖</h1>
+      <p class="tagline">You make every moment special.</p>
+    </header>
+
+    <section id="love-message">
+      <h2>Hi [Your Crush's Name],</h2>
+      <p>
+        From the moment I met you, my world has been brighter. Your smile, your laugh, and your kindness inspire me every day. 🌟
+      </p>
+      <p>
+        I just wanted to let you know how much you mean to me. You're amazing, and I'm so grateful to have you in my life. 💕
+      </p>
+    </section>
+
+    <section id="memories">
+      <h2>Our Memories</h2>
+      <div class="memory-grid">
+        <div class="memory">🌟 The day we met</div>
+        <div class="memory">💬 Our first conversation</div>
+        <div class="memory">🎉 That time we laughed so hard</div>
+      </div>
+    </section>
+
+    <section id="interactive-heart">
+      <h2>Click the Heart!</h2>
+      <div class="heart" onclick="showMessage()">💖</div>
+      <p id="secretMessage" class="hidden">I really like you. 💕</p>
+    </section>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
