@@ -85,28 +85,6 @@ header h1 {
   position: absolute;
   bottom: -50px;
   font-size: 2rem;
-  animation: floatUp 5s infinite;
-  opacity: 0; /* Start invisible */
-}
-
-@keyframes floatUp {
-  0% {
-    transform: translateY(0) scale(0.5);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(-150px) scale(1);
-    opacity: 0.7;
-  }
-  100% {
-    transform: translateY(-300px) scale(0.5);
-    opacity: 0;
-  }
-}
-.heart-bubble {
-  position: absolute;
-  bottom: -50px;
-  font-size: 2rem;
   animation: floatUp linear infinite;
   opacity: 0; /* Start invisible */
 }
@@ -147,8 +125,59 @@ header h1 {
 .heart-bubble:nth-child(18) { font-size: 2.1rem; left: 90%; animation-delay: 17s; animation-duration: 3s; }
 .heart-bubble:nth-child(19) { font-size: 1.9rem; left: 95%; animation-delay: 18s; animation-duration: 2s; }
 .heart-bubble:nth-child(20) { font-size: 2rem; left: 100%; animation-delay: 19s; animation-duration: 1s; }
+
 .hidden {
   display: none;
+}
+
+/* Login Form Styles */
+#login-form {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+#login-form h2 {
+  font-size: 2rem;
+  color: #ff6b6b;
+  margin-bottom: 20px;
+}
+
+#login-form label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+#login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#login-form button {
+  width: 100%;
+  padding: 10px;
+  background: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#login-form button:hover {
+  background: #ff3b2f;
 }
 
 /* Responsive Design */
@@ -170,6 +199,22 @@ header h1 {
   }
 
   .memory {
+    font-size: 1rem;
+  }
+
+  #login-form {
+    padding: 15px;
+  }
+
+  #login-form h2 {
+    font-size: 1.5rem;
+  }
+
+  #login-form input {
+    font-size: 0.9rem;
+  }
+
+  #login-form button {
     font-size: 1rem;
   }
 }
