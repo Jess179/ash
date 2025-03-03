@@ -70,28 +70,33 @@ header h1 {
 #animation-container {
   margin-top: 20px;
   position: relative;
-  height: 200px; /* Adjust based on your animation size */
+  height: 300px; /* Adjust based on your image size */
   overflow: hidden;
 }
 
-#walking-girl {
+#ash-image {
+  width: 150px; /* Adjust based on your image size */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.heart-bubble {
   position: absolute;
-  bottom: 0;
-  left: -200px; /* Start off-screen */
-  width: 100px; /* Adjust based on your illustration size */
-  height: 200px; /* Adjust based on your illustration size */
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 200"><circle cx="50" cy="50" r="40" fill="%23ff6b6b" /><line x1="50" y1="90" x2="50" y2="150" stroke="%23ff6b6b" stroke-width="10" /><line x1="50" y1="150" x2="30" y2="200" stroke="%23ff6b6b" stroke-width="10" /><line x1="50" y1="150" x2="70" y2="200" stroke="%23ff6b6b" stroke-width="10" /></svg>') no-repeat center center/cover;
-  animation: walkIn 2s forwards;
+  bottom: -50px;
+  font-size: 2rem;
+  animation: floatUp 5s infinite;
 }
 
-@keyframes walkIn {
-  from { left: -200px; }
-  to { left: 50%; transform: translateX(-50%); }
-}
-
-@keyframes walkOut {
-  from { left: 50%; transform: translateX(-50%); }
-  to { left: 100%; }
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
 }
 
 .hidden {
